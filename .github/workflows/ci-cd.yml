@@ -28,3 +28,9 @@ jobs:
 
             - name: Build App
               run: dotnet build -c Release --no-restore C1-CD.sln
+
+            #- name: Automated Tests
+              #run: dotnet test Weater.Tests -c Release --no-build
+
+            - name: Publish App
+              run: dotnet publish -c Release -o ./out C1-CD.sln
